@@ -7,7 +7,7 @@ This directory contains the complete set of **manual test cases** and other QA d
 - [`login_test_cases.md`](./login_test_cases.md): All scenarios related to the login process (positive and negative flows).
 - [`checkout_test_cases.md`](./checkout_test_cases.md): All checkout-related test cases, including successful and negative flows, and cart manipulation.
 - [`edgecase_test_cases.md`](./edgecase_test_cases.md): Observation and edge-case scenarios, such as the `problem_user` demo account and other special user behaviors.
-- [`bug-report_empty-cart-checkout.md`](./bug-report_empty-cart-checkout.md): A sample bug report found during testing (checkout possible with an empty cart).
+- [`bug-report_empty-cart-checkout.md`](./bug-report_empty_cart_checkout.md): A sample bug report found during testing (checkout possible with an empty cart).
 
 ## Usage
 

@@ -1,0 +1,12 @@
+{
+  "valid": {
+    "firstName": "Elek",
+    "lastName": "Teszt",
+    "zip": "12345"
+  },
+  "missingFirstName": {
+    "firstName": "",
+    "lastName": "Teszt",
+    "zip": "12345"
+  }
+}
