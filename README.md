@@ -104,4 +104,19 @@ The application allows users to complete the checkout process with an empty cart
 This is likely not intended in a real-world context.  
 See the attached [`Bug report`](/cypress/docs/bug-report_empty_cart_checkout.md) for full details and steps to reproduce.
 
->*(No automated test was created for this scenario, as fixing the bug would make such a test obsolete and failing in future runs.)*b
+>*(No automated test was created for this scenario, as fixing the bug would make such a test obsolete and failing in future runs.)*
+
+### Note on Test Structure
+
+### Note on Page Objects vs. Cypress Custom Commands
+
+This project originally started with a Page Object Model (POM) approach to encapsulate user actions and selectors,  
+in line with traditional test automation best practices.  
+However, after initial implementation and review, I decided to refactor the tests to use Cypress custom commands for all key user actions.
+
+This change was made for the following reasons:
+- Cypress custom commands are the recommended, idiomatic way to encapsulate repetitive flows and user interactions in Cypress.
+- For smaller or single-page applications (such as this assessment), custom commands keep tests cleaner, more readable, and easier to maintain than traditional page objects.
+- All business logic is now separated into reusable commands, with test data managed via fixtures, resulting in concise, maintainable, and scalable test scripts.
+
+The previous Page Object files are no longer used and have been removed to simplify the codebase.
