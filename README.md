@@ -6,6 +6,7 @@ The primary focus is on verifying the critical user flows of login and checkout,
 
 ~~Tests are designed for maintainability using the Page Object Model, to isolate selectors and actions for reuse and easy update.~~*  
 >*Replaced with Cypress Custom Commands.  
+
 User-visible error handling is checked, including error messages for each negative case.
 
 Both standard and edge case users (provided by SauceDemo) are explicitly tested to ensure the frontend correctly handles problematic and blocked accounts. Test scripts aim for fast feedback, easy maintenance, and reliability across different environments.
