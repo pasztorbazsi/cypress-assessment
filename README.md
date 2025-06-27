@@ -106,7 +106,6 @@ See the attached [`Bug report`](/cypress/docs/bug-report_empty_cart_checkout.md)
 
 >*(No automated test was created for this scenario, as fixing the bug would make such a test obsolete and failing in future runs.)*
 
-### Note on Test Structure
 
 ### Note on Page Objects vs. Cypress Custom Commands
 
