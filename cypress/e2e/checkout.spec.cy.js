@@ -8,7 +8,7 @@ describe('Checkout Tests using fixtures', () => {
     // Intercept service worker for Cypress/SauceDemo compatibility
     cy.intercept('/service-worker.js', { body: undefined });
     cy.visit('/');
-    cy.get('[data-test="username"]', { timeout: 15000 }).should('be.visible');
+    cy.get('[data-test="username"]').should('be.visible');
     // Load user credentials and checkout info from fixtures
     cy.fixture('users').as('users');
     cy.fixture('checkoutInfo').as('checkoutInfo');

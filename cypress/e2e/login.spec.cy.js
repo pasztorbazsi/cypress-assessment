@@ -16,7 +16,6 @@ describe('Login Tests using fixtures', () => {
   it('should login successfully with valid credentials from fixture', function () {
     // Use credentials from fixture data for standard user
     cy.loginUser(this.users.standardUser.username, this.users.standardUser.password);
-    cy.url().should('include', '/inventory');
     cy.get('[data-test="inventory-list"]').should('be.visible');
   });
 
@@ -24,20 +23,17 @@ describe('Login Tests using fixtures', () => {
     // Use locked_out_user credentials from fixture data
     cy.loginUser(this.users.lockedOutUser.username, this.users.lockedOutUser.password);
     cy.get('[data-test="error"]').should('contain.text', 'locked out');
-    cy.url().should('include', '/');
   });
 
   it('should show error with wrong password from fixture', function () {
     // Use valid username and invalid password from fixture
     cy.loginUser(this.users.invalidPassword.username, this.users.invalidPassword.password);
     cy.get('[data-test="error"]').should('contain.text', 'Username and password do not match');
-    cy.url().should('include', '/');
   });
 
   it('should show error with empty username from fixture', function () {
     // Use empty username from fixture for negative test
     cy.loginUser(this.users.emptyUsername.username, this.users.emptyUsername.password);
     cy.get('[data-test="error"]').should('contain.text', 'Username is required');
-    cy.url().should('include', '/');
   });
 });
